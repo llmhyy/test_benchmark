@@ -2,34 +2,19 @@ package com;
 
 public class Benchmark {
 	public void test1(int a, int b, int c){
-		if(a == b){
-			if(a < identity(c)){
-				return;
-			}
-			else if(Math.abs(a) < c+5){
-				return;
-			}
-		}
-		else if(Math.sqrt(a) + Math.exp(b) < Math.asin(c)){
-			if(b%5==3){
-				return;
-			}
-			else if(a/b>3){
-				return;
+		if(Math.sqrt(a)<=25){
+			if(Math.sqrt(b)<=25){
+				if(log(2, a-b)>=3){
+					System.currentTimeMillis();
+				}
 			}
 		}
 		
 		return;
 	}
-
-	private int identity(int c) {
-		if(c<=0){
-			return 0;			
-		}
-		else{
-			return 1 + identity(c-1);
-		}
+	
+	static int log(int x, int base)
+	{
+	    return (int) (Math.log(x) / Math.log(base));
 	}
-	
-	
 }
