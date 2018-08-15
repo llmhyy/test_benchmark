@@ -1,20 +1,26 @@
 package com;
 
 public class Benchmark {
-	public void test1(int a, int b, int c){
-		if(Math.sqrt(a)<=25){
-			if(Math.sqrt(b)<=25){
-				if(log(2, a-b)>=3){
-					System.currentTimeMillis();
-				}
+	public int test(int a, int b){
+		if(isValid(a, b)){
+			if(isInCorner(a, b)){
+				return 0;
 			}
 		}
 		
-		return;
+		return 1;
 	}
-	
-	static int log(int x, int base)
-	{
-	    return (int) (Math.log(x) / Math.log(base));
+
+	private boolean isInCorner(int a, int b) {
+		return Math.abs(a-b)>=9;
+	}
+
+	private boolean isValid(int a, int b) {
+		if(Math.pow(a, 2)<=25){
+			if(Math.pow(b, 2)<=25){
+				return true;
+			}
+		}
+		return false;
 	}
 }
