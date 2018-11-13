@@ -13,4 +13,22 @@ public class Benchmark6 {
 		
 		return 1;
 	}
+
+	public int[] getA() {
+		return a;
+	}
+
+	public void setA(int[] a) {
+		this.a = a;
+	}
+
+	public double getB() {
+		return b;
+	}
+
+	public void setB(double b) {
+		this.b = b;
+	}
+	
+	
 }
