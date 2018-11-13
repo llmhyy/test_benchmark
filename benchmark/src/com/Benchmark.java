@@ -15,7 +15,7 @@ public class Benchmark {
 		return Math.abs(a-b)>=9;
 	}
 
-	private boolean isValid(int a, int b) {
+	private boolean isValid(double a, double b) {
 		if(Math.pow(a, 2)<=25){
 			if(Math.pow(b, 2)<=25){
 				return true;
